@@ -38,7 +38,7 @@ const AllCars = ({
 }) => {
   return (
     <div>
-      <h3 className="text-4xl font-bold pb-5 lg:mt-8">All Cars</h3>
+      <h3 className="text-4xl font-bold pb-5 lg:mt-4">All Cars</h3>
 
       {/* Uncomment this section if you want to show FeaturedCars */}
       {/* 
@@ -50,7 +50,7 @@ const AllCars = ({
       </div> 
       */}
 
-      <div className="grid grid-cols-1 lg:pr-10 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 lg:pr-10 md:grid-cols-3 gap-5 mb-10">
         {carListing && carListing.length > 0 ? (
           [...carListing, ...carListing].map((car, index) => (
             <div
