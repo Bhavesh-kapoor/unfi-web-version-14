@@ -41,7 +41,7 @@ const BuyUsedCars = ({ initialCars, initialTotalItems, featuredCars }) => {
       <div className="p-4 md:p-6 lg:p-0">
         <div className="lg:grid lg:grid-cols-12 gap-10 mt-4">
           <div
-            className="bg-slate-50 lg:p-4 min-h-screen hidden lg:block lg:col-span-3"
+            className="overflow-y-scroll h-[80vh] lg:p-4 min-h-screen hidden lg:block lg:col-span-3"
             id="filter"
           >
             <BuyCarSearchFilter
