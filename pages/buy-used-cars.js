@@ -1,6 +1,5 @@
-// Import necessary modules using dynamic import for lazy loading
-import React, { useState } from "react";
 import Head from "next/head";
+import { useState } from "react";
 import dynamic from "next/dynamic";
 
 // Lazy loading components
@@ -39,20 +38,19 @@ const BuyUsedCars = ({ initialCars, initialTotalItems, featuredCars }) => {
         />
         <link rel="canonical" href="https://unificars.com/buy-used-cars" />
       </Head>
-
-      <div className="lg:grid grid-cols-11 bg-gray-100/10">
-        <div
-          className="overflow-y-scroll h-[80vh] sticky top-32 hidden lg:block col-span-2"
-          id="filter"
-        >
-          <BuyCarSearchFilter
-            setCarListing={setCarListing}
-            setLoading={setLoading}
-            filterUrl={`https://crm.unificars.com/api/filtersassuredsidebar`}
-          />
-        </div>
-        <div className="col-span-9">
-          <div className="min-h-screen mb-4">
+      <div className="p-4 md:p-6 lg:p-0">
+        <div className="lg:grid lg:grid-cols-12 gap-10 mt-4">
+          <div
+            className="bg-slate-50 lg:p-4 min-h-screen hidden lg:block lg:col-span-3"
+            id="filter"
+          >
+            <BuyCarSearchFilter
+              setCarListing={setCarListing}
+              setLoading={setLoading}
+              filterUrl={`https://crm.unificars.com/api/filtersassuredsidebar`}
+            />
+          </div>
+          <div className="lg:col-span-9 min-h-screen">
             <FilterCars
               model={""}
               gridView={gridView}

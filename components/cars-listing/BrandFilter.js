@@ -110,18 +110,20 @@ const BrandFilter = ({ fields, setFields, setCallClearAll, callClearAll }) => {
   return (
     <>
       <Accordion
-        className="shadow overflow-hidden"
+        className="shadow-lg mt-2 overflow-hidden rounded-lg"
         defaultExpanded={true}
-        style={{ boxShadow: "0px 0px 1px rgb(0 0 0 / 4%)" }}>
+        style={{ boxShadow: "0px 0px 1px rgb(0 0 0 / 4%)" }}
+      >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
-          id="panel2a-header">
-          <h6 className="font-semibold font-sans">Make & Model</h6>
+          id="panel2a-header"
+        >
+          <h6 className="font-semibold uppercase font-sans">Make & Model</h6>
         </AccordionSummary>
 
         {/* <form className='flex gap-1' onSubmit={(e) => HandleSearch(e)}> */}
-        <div className="flex items-center outline-[#f38102] border w-full px-2 text-black/70 border-[#e38102] p-1 rounded justify-between">
+        <div className="flex items-center hover:ring-2 hover:ring-gray-400 outline-gray-400 mx-4 border w-auto px-2 text-black/70 border-gray-400 p-1 rounded justify-between">
           <input
             placeholder="Search Cars..."
             onChange={(e) => {
@@ -131,10 +133,8 @@ const BrandFilter = ({ fields, setFields, setCallClearAll, callClearAll }) => {
             className="outline-none"
           />
 
-          <div
-            onClick={handleRemoveSelected}
-            className="cursor-pointer border rounded-md">
-            <CloseIcon />
+          <div onClick={handleRemoveSelected} className="cursor-pointer">
+            <CloseIcon className={"text-gray-300"} />
           </div>
         </div>
 
@@ -158,7 +158,8 @@ const BrandFilter = ({ fields, setFields, setCallClearAll, callClearAll }) => {
                     <Accordion
                       className="shadow"
                       key={index}
-                      expanded={expandAll ? true : brandExpanded == index}>
+                      expanded={expandAll ? true : brandExpanded == index}
+                    >
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel2a-content"
@@ -173,7 +174,8 @@ const BrandFilter = ({ fields, setFields, setCallClearAll, callClearAll }) => {
                             }
                           });
                           setExpandAll(false);
-                        }}>
+                        }}
+                      >
                         <p className="text-sm font-medium whitespace-nowrap -ml-2">
                           {brand.brand_name}
                         </p>
@@ -203,7 +205,8 @@ const BrandFilter = ({ fields, setFields, setCallClearAll, callClearAll }) => {
                             display: "flex",
                             flexDirection: "column",
                             ml: 1,
-                          }}>
+                          }}
+                        >
                           {brand && brand.model ? (
                             brand.model.map((model, idx) => {
                               if (
@@ -214,7 +217,8 @@ const BrandFilter = ({ fields, setFields, setCallClearAll, callClearAll }) => {
                                 return (
                                   <div
                                     key={idx}
-                                    className="flex items-center h-8">
+                                    className="flex items-center h-8"
+                                  >
                                     <FormControlLabel
                                       onChange={(e) => {
                                         HandleModel(index, idx);

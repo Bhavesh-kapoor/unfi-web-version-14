@@ -17,17 +17,17 @@ const FilterCars = (props) => {
 
   return (
     <>
-      <div className="flex items-center justify-between px-2 py-4 md:px-6">
+      <div className="flex items-center justify-between mb-4">
         {/* filter and sort by section */}
-        <div className="flex gap-2">
+        <div className="flex space-x-4">
           <div
-            className="lg:hidden flex cursor-pointer items-center group/filter hover:bg-[#f38102] hover:text-white hover:border-white transition-all duration-200 active:bg-orange-600 active:text-white gap-1 text-sm border-[1px] p-1 rounded border-[#f38102]/20 text-gray-600 mt-4"
+            className="lg:hidden px-2 py-1 flex cursor-pointer items-center group/filter hover:bg-[#f38102] hover:text-white hover:border-white transition-all duration-200 active:bg-orange-600 active:text-white gap-1 text-sm border-[1px] rounded-md border-[#f38102]/20 text-gray-600"
             onClick={() => {
               setFilterSection(!filterSection);
             }}
           >
-            <ListIcon className="p-1 text-[#f38102] group-hover/filter:text-white active:text-white" />
-            <p>Filters</p>
+            <ListIcon className="text-[#f38102] group-hover/filter:text-white active:text-white" />
+            <p className="text-lg font-medium">Filters</p>
           </div>
           {/* <div className='flex items-center cursor-pointer group/sort hover:bg-[#f38102] hover:text-white hover:border-white transition-all duration-200 active:bg-orange-600 active:text-white gap-1 text-sm border-[1px] p-1 rounded border-[#f38102]/20 text-gray-600' onClick={() => { setSortSectiion(!sortSectiion) }} >
                         <p>Sort By</p>
@@ -49,26 +49,28 @@ const FilterCars = (props) => {
 
       {/* filter section  */}
       <div
-        className={`fixed bg-black/40 bottom-0 w-full overflow-hidden z-50 transition-all duration-500 ease-in-out ${
+        className={`fixed bg-black/40 inset-0 w-full overflow-hidden z-50 transition-all duration-500 ease-in-out ${
           filterSection ? "h-full" : "h-0"
         }`}
       >
-        <div className="w-screen bg-white h-full overflow-y-scroll">
-          <div className="pt-10 p-8 pb-4 border-b-2 text-xl relative">
+        <div className="w-full md:w-2/3 bg-slate-50 h-full overflow-y-scroll">
+          <div className="flex justify-between items-center p-4">
             <h6>Filters</h6>
             <div
-              className="absolute right-2 text-2xl top-6 p-4 flex items-center gap-2 cursor-pointer"
+              className="text-2xl flex items-center gap-2 cursor-pointer"
               onClick={() => setFilterSection(false)}
             >
               <span className="border text-base px-2 rounded-md">Save</span>
               <CloseIcon />
             </div>
           </div>
-          <BuyCarSearchFilter
-            setLoading={setLoading}
-            setCarListing={setCarListing}
-            filterUrl={filterUrl}
-          />
+          <div className="px-4">
+            <BuyCarSearchFilter
+              setLoading={setLoading}
+              setCarListing={setCarListing}
+              filterUrl={filterUrl}
+            />
+          </div>
         </div>
       </div>
 
