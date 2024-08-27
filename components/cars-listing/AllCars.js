@@ -52,7 +52,7 @@ const AllCars = ({
 
       <div className="grid grid-cols-1 lg:pr-10 md:grid-cols-3 gap-5 mb-10">
         {carListing && carListing.length > 0 ? (
-          [...carListing, ...carListing].map((car, index) => (
+          carListing.map((car, index) => (
             <div
               key={index}
               id="carList"
@@ -72,7 +72,7 @@ const AllCars = ({
                 }}
               >
                 <Image
-                  className="rounded-t-2xl w-full h-auto object-contain"
+                  className="rounded-t-2xl w-full h-[200px] xs:h-[260px] md:h-[200px] object-cover"
                   src={car?.lead?.images[0]?.image}
                   width={400}
                   height={800}
@@ -120,7 +120,7 @@ const AllCars = ({
                       </Link>
                     ))}
                 </Carousel>*/}
-              <div className="changeallcartext">
+              <div className="p-4">
                 <Link
                   href={{
                     pathname: `/cars/${car.lead.brand
@@ -139,14 +139,14 @@ const AllCars = ({
                   className=""
                 >
                   <div className="justify-start items-center">
-                    <p className="text-[12px] md:text-sm text-black/100 font-medium font-sans">
+                    <p className="text-xs md:text-sm text-black/100 font-medium font-sans">
                       Unifi Rating
                     </p>
                     <Rating defaultValue={parseInt(car.lead.engine_rating)} />
                   </div>
 
                   <div className="relative">
-                    <h4 className="text-base uppercase line-clamp-2 font-extrabold my-2 font-sans text-start">
+                    <h4 className="text-base uppercase line-clamp-1 font-extrabold my-2 font-sans text-start">
                       {car.lead.brand}
                     </h4>
                     <p className="mb-4 md:text-sm text-start space-x-2">
@@ -174,39 +174,39 @@ const AllCars = ({
                   }}
                 >
                   <div className="flex flex-wrap gap-1 text-xs mt-2">
-                    <div className="flex items-center space-x-2 p-2 py-[1px] rounded-md bg-gray-200 opacity-60">
+                    <div className="flex items-center space-x-2 p-2 py-[1px] rounded-md bg-gray-200 opacity-80">
                       <FuelIcon className="p-1" />
-                      <span className="font-semibold">
+                      <span className="font-bold">
                         {car.lead.engine_type}
                       </span>
                     </div>
 
-                    <div className="flex items-center space-x-2 p-2 py-[1px] rounded-md bg-gray-200 opacity-60">
+                    <div className="flex items-center space-x-2 p-2 py-[1px] rounded-md bg-gray-200 opacity-80">
                       <MeterIcon className="p-1" />
-                      <span className="font-semibold">
+                      <span className="font-bold">
                         {parseInt(
                           car.lead.km_driven.split(" ")[0]
                         ).toLocaleString("en-IN")}
                       </span>
                     </div>
 
-                    <div className="flex items-center space-x-2 p-2 py-[1px] rounded-md bg-gray-200 opacity-60">
+                    <div className="flex items-center space-x-2 p-2 py-[1px] rounded-md bg-gray-200 opacity-80">
                       <CarFront className="p-1" />
-                      <span className="font-semibold">
+                      <span className="font-bold">
                         {car.lead.registration_in}
                       </span>
                     </div>
 
-                    <div className="flex items-center space-x-2 p-2 py-[1px] rounded-md bg-gray-200 opacity-60">
+                    <div className="flex items-center space-x-2 p-2 py-[1px] rounded-md bg-gray-200 opacity-80">
                       <UserIcon className="p-1" />
-                      <span className="font-semibold">
+                      <span className="font-bold">
                         {car.lead.ownership.split(" ")[0]} Owner
                       </span>
                     </div>
                   </div>
 
                   <div className="relative pt-3 flex flex-wrap-reverse gap-1 lg:items-center flex-row lg:flex-row">
-                    <p className="font-bold font-sans px-2">
+                    <p className="font-bold font-sans bg-blue-500 text-white py-1 rounded-md px-2">
                       ₹{" "}
                       {parseInt(car.lead.selling_amount).toLocaleString(
                         "en-IN"

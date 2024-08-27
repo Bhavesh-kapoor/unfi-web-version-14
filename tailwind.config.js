@@ -12,6 +12,15 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      screens: {
+        xs: "384px", // Custom extra small breakpoint for mobile devices
+        sm: "640px", // Default small breakpoint
+        md: "768px", // Default medium breakpoint
+        lg: "1024px", // Default large breakpoint
+        xl: "1280px", // Default extra-large breakpoint
+        "2xl": "1536px", // Default 2x large breakpoint
+        "3xl": "1920px", // Custom extra-large breakpoint for very large screens
+      },
       fontFamily: {
         robo: ["Roboto"],
       },
