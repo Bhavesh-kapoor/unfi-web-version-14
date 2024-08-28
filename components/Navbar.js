@@ -1,27 +1,26 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+"use client";
 
+import Link from "next/link";
 import Image from "next/image";
-import { ArrowDown, CloseIcon, Hamburger } from "@/common/IconsSvg";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { IoCallOutline } from "react-icons/io5";
+import { ArrowDown, CloseIcon, Hamburger } from "@/common/IconsSvg";
 
 const TopBar = dynamic(() => import("./TopBar"));
 
 const Navbar = () => {
-  const [slider, setSlider] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+  const [slider, setSlider] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Effect to handle window resizing and possible hydration issues
   useEffect(() => {
-    // Ensure the component is mounted before allowing state changes that affect the DOM structure
     const handleResize = () => {
-      if (window.innerWidth >= 2560) {
-        setSlider(false);
-      }
+      if (window.innerWidth >= 2560) setSlider(false);
     };
-
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -54,14 +53,16 @@ const Navbar = () => {
             </div>
             <ul
               className={`font-medium hidden text-base items-start xl:flex space-x-6`}
-              style={{ alignItems: "center" }}>
+              style={{ alignItems: "center" }}
+            >
               <Link
                 href="/"
                 className={`hover:text-[#f38102] active:text-orange-600 decoration-2 decoration-[#f38102] ${
                   router.pathname == "/"
                     ? "text-orange-600 underline underline-offset-8"
                     : ""
-                }`}>
+                }`}
+              >
                 Home
               </Link>
               <Link
@@ -70,7 +71,8 @@ const Navbar = () => {
                   router.pathname == "/buy-used-cars"
                     ? "text-orange-600 underline underline-offset-8"
                     : ""
-                }`}>
+                }`}
+              >
                 {" "}
                 Buy Car
               </Link>
@@ -80,7 +82,8 @@ const Navbar = () => {
                   router.pathname == "/sell-used-cars"
                     ? "text-orange-600 underline underline-offset-8"
                     : ""
-                }`}>
+                }`}
+              >
                 Sell Car
               </Link>
 
@@ -90,30 +93,35 @@ const Navbar = () => {
                   router.pathname == "/contact"
                     ? "text-orange-600 underline underline-offset-8"
                     : ""
-                }`}>
+                }`}
+              >
                 Contact Us
               </Link>
 
               <div
                 className="relative py-2"
                 onMouseEnter={() => setIsOpen(true)}
-                onMouseLeave={() => setIsOpen(false)}>
+                onMouseLeave={() => setIsOpen(false)}
+              >
                 <button
                   onClick={toggleDropdown}
                   className={`hover:text-[#f38102] active:text-orange-600 decoration-2 decoration-[#f38102]  flex items-center ${
                     isOpen ? "text-orange-600 underline underline-offset-8" : ""
-                  }`}>
+                  }`}
+                >
                   More <ArrowDown className="p-1 ml-2" />
                 </button>
                 {isOpen && (
                   <ul
                     className="absolute -left-[25%] pt-8 text-sm"
-                    style={{ width: "max-content" }}>
+                    style={{ width: "max-content" }}
+                  >
                     <div className="bg-white shadow-lg rounded-lg">
                       <li
                         className={`hover:bg-gray-100 ${
                           router.pathname == "/about" ? "bg-gray-200" : ""
-                        }`}>
+                        }`}
+                      >
                         <Link href="/about" className="block px-4 py-2">
                           About Us
                         </Link>
@@ -135,10 +143,12 @@ const Navbar = () => {
                           router.pathname == "/car-health-report"
                             ? "bg-gray-200"
                             : ""
-                        }`}>
+                        }`}
+                      >
                         <Link
                           href="/car-health-report"
-                          className="block px-4 py-2">
+                          className="block px-4 py-2"
+                        >
                           Car Health Report
                         </Link>
                       </li>
@@ -146,7 +156,8 @@ const Navbar = () => {
                       <li
                         className={`hover:bg-gray-100 ${
                           router.pathname == "/scrap-cars" ? "bg-gray-200" : ""
-                        }`}>
+                        }`}
+                      >
                         <Link href="/scrap-cars" className="block px-4 py-2">
                           Scrap Car
                         </Link>
@@ -157,7 +168,8 @@ const Navbar = () => {
                           router.pathname == "/challan-check"
                             ? "bg-gray-200"
                             : ""
-                        }`}>
+                        }`}
+                      >
                         <Link href="/challan-check" className="block px-4 py-2">
                           Challan Check
                         </Link>
@@ -176,18 +188,34 @@ const Navbar = () => {
                   Login
                 </div>
               </Link> */}
-
               <Link
-                href="/become-our-partner"
+                href={
+                  pathname && pathname.includes("/cars/")
+                    ? "tel:+919911771977"
+                    : "/become-our-partner"
+                }
                 className={`md:pl-12 hover:text-[#f38102] active:text-orange-600 ${
                   router.pathname == "/become-our-partner"
                     ? "text-orange-600 "
                     : ""
-                }`}>
+                }`}
+              >
                 <div
-                  className="bg-orange-500 cursor-pointer flex rounded-xl font-bold text-white p-1 px-4 whitespace-nowrap border-2 border-orange-500"
-                  style={{ width: "max-content" }}>
-                  Become our partner
+                  className={`cursor-pointer flex rounded-xl font-bold text-white p-1 px-4 whitespace-nowrap border-2 ${
+                    pathname && pathname.includes("/cars/")
+                      ? "bg-orange-400 border-orange-400"
+                      : "bg-orange-500 border-orange-500"
+                  }`}
+                  style={{ width: "max-content" }}
+                >
+                  {pathname && pathname.includes("/cars/") ? (
+                    <p className="inline-flex gap-1 items-center text-white">
+                      <IoCallOutline />
+                      Call Us
+                    </p>
+                  ) : (
+                    "Become our partner"
+                  )}
                 </div>
               </Link>
             </ul>
@@ -196,11 +224,13 @@ const Navbar = () => {
             <ul
               className={`text-base fixed w-0 opacity-0 z-50 h-full bg-black/60 overflow-hidden right-0 bottom-0 transition-all xl:hidden text-white ${
                 slider ? "w-full opacity-100" : ""
-              }`}>
+              }`}
+            >
               <div className="bg-[#202020] h-full w-64 right-0 absolute flex flex-col space-y-2 font-bold tracking-wider">
                 <div
                   className="absolute right-2 text-2xl top-4 p-4"
-                  onClick={() => setSlider(!slider)}>
+                  onClick={() => setSlider(!slider)}
+                >
                   <CloseIcon />
                 </div>
                 <li className="px-4">
@@ -208,7 +238,8 @@ const Navbar = () => {
                     href="/"
                     onClick={() => {
                       setSlider(false);
-                    }}>
+                    }}
+                  >
                     <Image
                       width={150}
                       height={80}
@@ -226,7 +257,8 @@ const Navbar = () => {
                     }}
                     className={`${
                       router.pathname == "/" ? "text-[#f38102] " : ""
-                    }`}>
+                    }`}
+                  >
                     Home
                   </Link>
                 </li>
@@ -241,7 +273,8 @@ const Navbar = () => {
                       router.pathname == "/buy-used-cars"
                         ? "text-[#f38102] "
                         : ""
-                    }`}>
+                    }`}
+                  >
                     Buy Car
                   </Link>
                 </li>
@@ -256,7 +289,8 @@ const Navbar = () => {
                       router.pathname == "/sell-used-cars"
                         ? "text-[#f38102] "
                         : ""
-                    }`}>
+                    }`}
+                  >
                     Sell Car
                   </Link>
                 </li>
@@ -288,7 +322,8 @@ const Navbar = () => {
                       router.pathname == "/car-health-report"
                         ? "text-[#f38102] "
                         : ""
-                    }`}>
+                    }`}
+                  >
                     Car Health Report
                   </Link>
                 </li>
@@ -301,7 +336,8 @@ const Navbar = () => {
                     }}
                     className={`${
                       router.pathname == "/scrap-cars" ? "text-[#f38102] " : ""
-                    }`}>
+                    }`}
+                  >
                     Scrap Car
                   </Link>
                 </li>
@@ -316,7 +352,8 @@ const Navbar = () => {
                       router.pathname == "/challan-check"
                         ? "text-[#f38102] "
                         : ""
-                    }`}>
+                    }`}
+                  >
                     Challan Check
                   </Link>
                 </li>
@@ -329,7 +366,8 @@ const Navbar = () => {
                     }}
                     className={`${
                       router.pathname == "/about" ? "text-[#f38102] " : ""
-                    }`}>
+                    }`}
+                  >
                     About Us
                   </Link>
                 </li>
@@ -342,7 +380,8 @@ const Navbar = () => {
                     }}
                     className={`${
                       router.pathname == "/contact" ? "text-[#f38102] " : ""
-                    }`}>
+                    }`}
+                  >
                     Contact
                   </Link>
                 </li>
@@ -358,7 +397,8 @@ const Navbar = () => {
                       router.pathname == "/become-our-partner"
                         ? "text-[#f38102] "
                         : ""
-                    }`}>
+                    }`}
+                  >
                     Become our partner
                   </Link>
                 </li>
