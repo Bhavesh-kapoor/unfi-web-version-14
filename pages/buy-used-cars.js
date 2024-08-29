@@ -89,7 +89,7 @@ export async function getStaticProps() {
         method: "POST",
         body: JSON.stringify({
           min_price: 100000,
-          max_price: 4000000,
+          max_price: 10000000,
           owner: "",
           year: "",
           km: "",

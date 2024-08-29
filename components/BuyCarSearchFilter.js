@@ -14,7 +14,7 @@ import FormGroup from "@mui/material/FormGroup";
 
 const BuyCarSearchFilter = (props) => {
   const { setCarListing, setLoading } = props;
-  const [value, setValue] = useState([100000, 4000000]);
+  const [value, setValue] = useState([100000, 10000000]);
   const [fields, setFields] = useState({ owner: "", year: "", km: "" });
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -26,7 +26,7 @@ const BuyCarSearchFilter = (props) => {
       label: "MIN",
     },
     {
-      value: 4000000,
+      value: 10000000,
       label: "MAX",
     },
   ]);
@@ -110,7 +110,6 @@ const BuyCarSearchFilter = (props) => {
                   <Slider
                     value={value}
                     step={25000}
-                    // valueLabelDisplay="auto"
                     marks={marks}
                     onChange={(e) => {
                       HandleSlider(e);
@@ -118,7 +117,7 @@ const BuyCarSearchFilter = (props) => {
                     color="warning"
                     min={100000}
                     onChangeCommitted={HandleSiderValueChanged}
-                    max={2500000}
+                    max={10000000}
                     size="small"
                   />
                 </Stack>

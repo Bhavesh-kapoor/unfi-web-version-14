@@ -14,11 +14,11 @@ import { FilterIcon } from "lucide-react";
 
 const BuyCarSearchFilter = (props) => {
   const { setCarListing, setLoading, filterUrl } = props;
-  const [value, setValue] = useState([100000, 4000000]);
+  const [value, setValue] = useState([100000, 10000000]);
   // use for filters
   const [fields, setFields] = useState({
     min_price: 100000,
-    max_price: 4000000,
+    max_price: 10000000,
     owner: "",
     year: "",
     km: "",
@@ -36,7 +36,7 @@ const BuyCarSearchFilter = (props) => {
       label: "MIN",
     },
     {
-      value: 4000000,
+      value: 10000000,
       label: "MAX",
     },
   ]);
@@ -103,11 +103,11 @@ const BuyCarSearchFilter = (props) => {
   const [callClearAll, setCallClearAll] = useState(false);
 
   const handleClearAll = () => {
-    setValue([100000, 4000000]);
+    setValue([100000, 10000000]);
 
     setFields({
       min_price: 100000,
-      max_price: 4000000,
+      max_price: 10000000,
       owner: "",
       year: "",
       km: "",
@@ -135,18 +135,18 @@ const BuyCarSearchFilter = (props) => {
         {/* applied filter  */}
         <div className="flex gap-2 flex-wrap mt-2">
           {value[0] !== 100000 ||
-            (value[1] !== 4000000 ? (
+            (value[1] !== 10000000 ? (
               <div className="text-xs bg-gray-200 rounded p-2 flex items-center gap-1">
                 {value[0].toLocaleString("en-IN")} -{" "}
                 {value[1].toLocaleString("en-IN")}
                 <div
                   className="cursor-pointer"
                   onClick={() => {
-                    setValue([100000, 4000000]);
+                    setValue([100000, 10000000]);
                     setFields({
                       ...fields,
                       min_price: 100000,
-                      max_price: 4000000,
+                      max_price: 10000000,
                     });
                   }}
                 >
@@ -250,7 +250,7 @@ const BuyCarSearchFilter = (props) => {
                       }}
                       color="info"
                       min={100000}
-                      max={2500000}
+                      max={10000000}
                       onChangeCommitted={HandleSiderValueChanged} // When slider interaction ends
                       size="medium"
                     />
