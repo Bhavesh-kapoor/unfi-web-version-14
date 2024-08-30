@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { AiOutlineClose } from "react-icons/ai";
 import LinearProgress from "@mui/material/LinearProgress";
 import { orange } from "@mui/material/colors";
@@ -94,31 +94,32 @@ const OtpModal = (props) => {
       const jsonResponse = await fetchOtpRes.json();
       if (jsonResponse.code == 200) {
         setMessage(jsonResponse);
-        if (jsonResponse.link) {
-          setLoading(true);
-          setMessage({
-            code: 200,
-            status: ["Please Wait while Fecthing a Report..."],
-          });
-          // router.push(jsonResponse.link);
-          setShowModal(false);
+        router.push(jsonResponse.link);
+        // if (jsonResponse.link) {
+        //   setLoading(true);
+        //   setMessage({
+        //     code: 200,
+        //     status: ["Please Wait while Fecthing a Report..."],
+        //   });
+        //   // router.push(jsonResponse.link);
+        //   setShowModal(false);
 
-          setCarDetailsModal(true);
+        //   setCarDetailsModal(true);
 
-          // for showing progress
-          setInterval(() => {
-            setProgress((pre) => pre + 20);
-            if (progress + 20 === 100) {
-              clearInterval(interval);
-            }
-          }, 1000);
-          setTimeout(() => {
-            HandleCloseModal();
-            setUserNumber("");
-            setOtp("");
-            setLoading(false);
-          }, 6000);
-        }
+        //   // for showing progress
+        //   setInterval(() => {
+        //     setProgress((pre) => pre + 20);
+        //     if (progress + 20 === 100) {
+        //       clearInterval(interval);
+        //     }
+        //   }, 1000);
+        //   setTimeout(() => {
+        //     HandleCloseModal();
+        //     setUserNumber("");
+        //     setOtp("");
+        //     setLoading(false);
+        //   }, 6000);
+        // }
       } else {
         setMessage(jsonResponse);
       }
@@ -129,17 +130,20 @@ const OtpModal = (props) => {
     <div
       className={`fixed bottom-0 flex justify-center items-center ${
         showModal ? "h-full" : "h-0"
-      } overflow-hidden bg-black/50 z-40 transition-all duration-500 w-full`}>
+      } overflow-hidden bg-black/50 z-40 transition-all duration-500 w-full`}
+    >
       <div className="bg-white p-4 rounded-xl shadow w-80 md:w-1/3 relative">
         <div
           className="absolute cursor-pointer top-4 right-4"
-          onClick={() => HandleCloseModal()}>
+          onClick={() => HandleCloseModal()}
+        >
           <AiOutlineClose className="text-xl" />
         </div>
         <div
           className={`overflow-hidden transition-all duration-200 ${
             ToggleNumberTabAfterOtpRecevied ? "w-0 hidden" : "w-full"
-          }`}>
+          }`}
+        >
           <div className="flex justify-center">
             <Image
               src={"/report.svg"}
@@ -177,7 +181,8 @@ const OtpModal = (props) => {
                       key={index}
                       className={`mt-2 text-red-500 text-xs ${
                         message.code == 200 ? "text-green-500" : "text-red-500"
-                      }`}>
+                      }`}
+                    >
                       {msg}.
                     </p>
                   );
@@ -189,23 +194,27 @@ const OtpModal = (props) => {
             <button
               type="submit"
               className="border w-full p-2 rounded shadow transition-all duration-200 flex justify-center group bg-blue-500 text-white"
-              disabled={loading}>
+              disabled={loading}
+            >
               <svg
                 hidden={!loading}
                 className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <circle
                   className="opacity-25"
                   cx="12"
                   cy="12"
                   r="10"
                   stroke="gray"
-                  strokeWidth="4"></circle>
+                  strokeWidth="4"
+                ></circle>
                 <path
                   className="opacity-75 fill-[#f38102] group-disabled:fill-[#f38102] group-hover:fill-white"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
               </svg>
               <p className="text-center">Send OTP</p>
             </button>
@@ -214,7 +223,8 @@ const OtpModal = (props) => {
         <div
           className={`overflow-hidden transition-all duration-200 ${
             ToggleNumberTabAfterOtpRecevied ? " w-full block" : "w-0 hidden"
-          }`}>
+          }`}
+        >
           <div className="text-center">
             <h6 className="text-base text-black/70 pt-2">
               Please Enter Your OTP
@@ -229,7 +239,8 @@ const OtpModal = (props) => {
                 onClick={() => {
                   setUserNumber("");
                   setToggleNumberTabAfterOtpRecevied(false);
-                }}>
+                }}
+              >
                 {" "}
                 click here
               </button>
@@ -254,7 +265,8 @@ const OtpModal = (props) => {
                       key={index}
                       className={`mt-2 text-red-500 text-xs ${
                         message.code == 200 ? "text-green-500" : "text-red-500"
-                      }`}>
+                      }`}
+                    >
                       {msg}.
                     </p>
                   );
@@ -271,7 +283,8 @@ const OtpModal = (props) => {
                     className="text-blue-500"
                     onClick={() => {
                       HandleReSendOtp();
-                    }}>
+                    }}
+                  >
                     {" "}
                     Click Here
                   </button>
@@ -299,23 +312,27 @@ const OtpModal = (props) => {
             <button
               type="submit"
               className="border border-[#f38102] text-[#f38102] active:bg-orange-600 hover:bg-[#f38102] hover:text-white w-full p-1 rounded shadow transition-all duration-200 flex justify-center group disabled:bg-white disabled:text-[#f38102]"
-              disabled={loading}>
+              disabled={loading}
+            >
               <svg
                 hidden={!loading}
                 className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <circle
                   className="opacity-25"
                   cx="12"
                   cy="12"
                   r="10"
                   stroke="gray"
-                  strokeWidth="4"></circle>
+                  strokeWidth="4"
+                ></circle>
                 <path
                   className="opacity-75 fill-[#f38102] group-disabled:fill-[#f38102] group-hover:fill-white"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
               </svg>
               <p className="text-center">Submit OTP</p>
             </button>
