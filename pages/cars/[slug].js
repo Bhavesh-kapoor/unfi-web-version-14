@@ -115,8 +115,9 @@ const carPage = () => {
     <>
       <Head>
         <title>
-          {car && car.lead[0] ? car.lead[0].Model : ""}{" "}
-          {car && car.lead[0] ? car.lead[0].Brand : ""} - Unifi Cars
+          {car && car.lead[0] && car.lead[0]?.Brand
+            ? car.lead[0]?.Brand
+            : "Unifi Cars"}
         </title>
       </Head>
       <div className="bg-gray-100/10" style={{ paddingTop: "18px" }}>
