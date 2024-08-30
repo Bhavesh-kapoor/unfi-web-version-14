@@ -72,18 +72,20 @@ export default function App({ Component, pageProps }) {
             ></iframe>
           </noscript>
 
-          <Script
+          <script
+            async
             src="https://www.googletagmanager.com/gtag/js?id=AW-16482210051"
-            strategy="afterInteractive"
-          />
+          ></script>
           <Script
+            id="google-analytics1"
+            type="text/javascript"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'AW-16482210051');
-            `,
+              gtag('config', 'AW-16482210051');`,
             }}
           />
         </Head>
