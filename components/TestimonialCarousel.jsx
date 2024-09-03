@@ -70,9 +70,9 @@ function TestimonialCarousel({ testimonialData }) {
   return (
     <div className="bg-white w-full my-16">
       <div className="text-center items-center flex flex-col mb-8 px-4">
-        <h3 className="text-2xl md:text-4xl font-bold text-[#000] my-2">
+        <h2 className="text-2xl md:text-4xl font-bold text-[#000] my-2">
           What Our Clients Are Saying
-        </h3>
+        </h2>
         <p className="customgryfnt text-lg font-normal">
           Their good reviews motivate us to do more
         </p>
@@ -82,11 +82,13 @@ function TestimonialCarousel({ testimonialData }) {
           responsive={responsive}
           arrows={false}
           autoPlay={true}
-          infinite={true}>
+          infinite={true}
+        >
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="flex flex-col items-center bg-white shadow border-2 rounded-3xl p-4 md:p-6 mr-2 h-full max-w-[500px]">
+              className="flex flex-col items-center bg-white shadow border-2 rounded-3xl p-4 md:p-6 mr-2 h-full max-w-[500px]"
+            >
               <div>
                 <div className="flex justify-between items-center w-full flex-wrap gap-2">
                   <h4 className="font-bold text-lg">{testimonial.name}</h4>

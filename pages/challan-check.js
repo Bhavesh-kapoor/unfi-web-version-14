@@ -98,19 +98,46 @@ const Challan = () => {
   return (
     <div>
       <Head>
-        <title>Check your Challan Status Online and Pay with Unifi Cars</title>
+        <title>Check E-Challan Online | E-Challan Status - Unifi Cars</title>
         <meta
           name="description"
-          content="Check your challan staus online for free & pay car challan in simple steps at Unifi Cars to safeguard yourself from penalty and other legal issues."
+          content="Easily check E-challan online with Unifi Cars. Get real-time updates, and manage traffic violations quickly. Check vehicle's e-challan status today!"
         />
         <meta
           name="keywords"
-          content="check challan online, check any e-challan, online challan status, checking e-challan status, online challan check,e-challan status"
+          content="check e-challan, e-challan status, online e-challan, Unifi Cars"
         />
         <meta
           name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
         />
+        <meta
+          property="og:title"
+          content="Check Your E-Challan Online | Fast & Easy - Unifi Cars"
+        />
+        <meta
+          property="og:description"
+          content="Unifi Cars makes it simple to check your E-challan status online. Get real-time updates, pay fines, and manage your traffic violations effortlessly. Stay on top of your e-challan status now!"
+        />
+        <meta property="og:url" content="https://unificars.com/challan-check" />
+        <meta
+          property="og:image"
+          content="https://unificars.com/logo.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Check Your E-Challan Online | Quick & Easy - Unifi Cars"
+        />
+        <meta
+          name="twitter:description"
+          content="Easily check your e-challan status online with Unifi Cars. Manage traffic fines and violations quickly and stay updated with real-time information."
+        />
+        <meta
+          name="twitter:image"
+          content="https://unificars.com/logo.png"
+        />
+
         <link rel="canonical" href="https://unificars.com/challan-check" />
       </Head>
 
@@ -125,9 +152,9 @@ const Challan = () => {
                   className="w-full h-auto rounded-lg mt-6"
                 />
                 <div className="absolute inset-0 rounded-lg flex items-end p-4 mb-4">
-                  <h2 className="text-white w-fit lg:text-5xl text-xl font-bold text-left">
+                  <h1 className="text-white w-fit lg:text-5xl text-xl font-bold text-left">
                     Pay Challan with unifi cars
-                  </h2>
+                  </h1>
                 </div>
               </div>
               {/* <img src={"/challan.png"} className='rounded-xl' alt="E-challan" /> */}
@@ -135,9 +162,9 @@ const Challan = () => {
               <div className="space-y-12">
                 {/* e challan */}
                 <div className="space-y-4">
-                  <h1 className="text-2xl text-black mt-4 font-sansserif font-extrabold">
+                  <h2 className="text-2xl text-black mt-4 font-sansserif font-extrabold">
                     E-challan
-                  </h1>
+                  </h2>
                   <p className="text-md font-normal">
                     An e-challan is a digital fine issued by the traffic police
                     for a traffic violation. An e-challan can be checked online,
@@ -153,9 +180,9 @@ const Challan = () => {
 
                 {/* how to check  */}
                 <div className="space-y-4">
-                  <h1 className="text-2xl text-black mt-4 font-sansserif font-extrabold">
+                  <h2 className="text-2xl text-black mt-4 font-sansserif font-extrabold">
                     How to check e-challan
-                  </h1>
+                  </h2>
                   <p className="text-md font-normal">
                     Enter the registration number of your car and click submit
                     to check any issued e-challan to know the challan status for
@@ -170,17 +197,17 @@ const Challan = () => {
 
                 {/* benifit of e-challan */}
                 <div className="space-y-4">
-                  <h1 className="text-2xl text-black font-sansserif font-extrabold">
+                  <h2 className="text-2xl text-black font-sansserif font-extrabold">
                     Benefits of paying challan online with Unifi cars
-                  </h1>
+                  </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm">
                     <div className="hover:bg-blue-500 hover:text-white bg-white text-black p-6 rounded-lg shadow-md h-56">
                       <FaRegHand className="text-2xl mb-4" />
-                      <h4 className="text-base font-semibold mb-2 buyh4">
+                      <h3 className="text-base font-semibold mb-2 buyh4">
                         Avoid Late
                         <br />
                         Penalties
-                      </h4>
+                      </h3>
                       <p className="mb-4">
                         Get an accurate and fair quote for scrapping your car
                         and helping the environment.
@@ -188,9 +215,9 @@ const Challan = () => {
                     </div>
                     <div className="hover:bg-blue-500 hover:text-white bg-white text-black p-6 rounded-lg shadow-md h-56">
                       <FaRupeeSign className="text-2xl mb-4" />
-                      <h4 className="text-base font-semibold mb-2 buyh4">
+                      <h3 className="text-base font-semibold mb-2 buyh4">
                         Pay From <br /> Anywhere
-                      </h4>
+                      </h3>
                       <p className="mb-4">
                         Get benefits on buying a new car with a Certificate of
                         deposit.
@@ -198,10 +225,10 @@ const Challan = () => {
                     </div>
                     <div className="hover:bg-blue-500 hover:text-white bg-white text-black p-6 rounded-lg shadow-md h-56">
                       <FaBuildingColumns className="text-2xl mb-4" />
-                      <h4 className="text-base font-semibold mb-2 buyh4">
+                      <h3 className="text-base font-semibold mb-2 buyh4">
                         No Hassle Of <br />
                         Court Visits
-                      </h4>
+                      </h3>
                       <p className="mb-4">
                         Unifi Cars partners only with Government-registered
                         vendors.
@@ -212,9 +239,9 @@ const Challan = () => {
 
                 {/* step */}
                 <div className="space-y-4">
-                  <h1 className="text-2xl text-black font-sansserif font-extrabold">
+                  <h2 className="text-2xl text-black font-sansserif font-extrabold">
                     Steps to pay e-challan
-                  </h1>
+                  </h2>
                   <div className="mt-3">
                     <p className="mb-4">
                       <b>Steps:1</b> Navigate to check and pay e-challan
@@ -237,9 +264,9 @@ const Challan = () => {
 
                 {/* table */}
                 <div className="space-y-4">
-                  <h1 className="text-2xl text-black font-extrabold">
+                  <h2 className="text-2xl text-black font-extrabold">
                     What are the common type of traffic challan?
-                  </h1>
+                  </h2>
                   <div className="flex items-center justify-center h-full bg-gray-100 mt-3">
                     <div className="bg-white shadow-md rounded-lg overflow-hidden w-4/4">
                       <table className="min-w-full leading-normal">
@@ -328,9 +355,9 @@ const Challan = () => {
             <div className="border-2 border-red-500 md:mt-4 max-w-[500px] w-full md:sticky-element md:sticky md:top-36  md:bottom-28 bg-orange-500 p-4 self-baseline challan-headbg">
               <div className="bg-white p-6 md:px-2 px-6 rounded-2xl shadow">
                 <div className="p-3 rounded-md">
-                  <h1 className="text-3xl text-black my-2 font-sansserif font-extrabold text-center">
+                  <h2 className="text-3xl text-black my-2 font-sansserif font-extrabold text-center">
                     Check & Pay e-challan
-                  </h1>
+                  </h2>
                   <div className="font-bold text-[#465166] w-full text-field mb-2">
                     <p className="text-md text-[#465166] my-2">
                       Enter your car Number

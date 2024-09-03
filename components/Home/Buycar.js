@@ -38,9 +38,9 @@ const Buycar = () => {
     <div className="my-6 text-center text-gray-600">
       <div className="mx-auto space-y-6 w-[95%]">
         <div className="text-center font-normal text-xl">
-          <h3 className="text-[#000] font-black text-center sellheadfont">
+          <h2 className="text-[#000] font-black text-center sellheadfont">
             Why Buy Car From Us
-          </h3>
+          </h2>
           {/* <span className="uppercase tracking-widest">
             Keys to cash Unlock the value of your car
           </span> */}
@@ -56,9 +56,9 @@ const Buycar = () => {
                 alt="200 point inspection report"
               />
               <div className="text-left space-y-4 py-4">
-                <h4 className="text-xl text-black font-black tracking-widest mt-4 flex-none buyh4">
+                <h3 className="text-xl text-black font-black tracking-widest mt-4 flex-none buyh4">
                   210 point Inspection report
-                </h4>
+                </h3>
                 <p className="text-lg">
                   Unifi Cars believes in providing better deal for our users
                   with 210-point inspection report.
@@ -77,9 +77,9 @@ const Buycar = () => {
                 alt="2000 km engine warranty"
               />
               <div className="text-left space-y-4 py-4">
-                <h4 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4">
+                <h3 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4">
                   2000 km engine warranty
-                </h4>
+                </h3>
                 <p className="text-lg">
                   We assure your journey with upto 2000 km engine warranty with
                   us.
@@ -98,9 +98,9 @@ const Buycar = () => {
                 alt="free accessories worth 10k"
               />
               <div className="text-left space-y-4 py-4">
-                <h4 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4">
+                <h3 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4">
                   Free accessories worth ₹10k
-                </h4>
+                </h3>
                 <p className="text-lg">
                   On your purchase from Unifi Cars we provide free accessories
                   worth upto 10K.
@@ -119,9 +119,9 @@ const Buycar = () => {
                 alt="first service free"
               />
               <div className="text-left space-y-4 py-4">
-                <h4 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4">
+                <h3 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4">
                   First service free with Unifi Cars
-                </h4>
+                </h3>
                 <p className="text-lg">
                   We provide first free car service for our buyers i.e. car
                   servicing, washing etc. 

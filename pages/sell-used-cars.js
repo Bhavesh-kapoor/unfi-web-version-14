@@ -30,9 +30,9 @@ const sellCars = () => {
 
   const router = useRouter();
 
-  const title = "Sell Used Car Online at Best Price from Home - Unificars";
+  const title = "Sell Your Used Car Online | Fast & Hassle-Free Process";
   const description =
-    "Sell your used cars online at the best price. Sell  used car conveniently in just  3 simple steps with free inspection and easy RC transfer at Unifi Cars";
+    "Unifi Cars is your trusted online marketplace for buying and selling used cars. Explore a wide range of certified pre-owned vehicles at competitive prices!";
   const canonicalUrl = "https://unificars.com/sell-used-cars";
 
   useEffect(() => {
@@ -59,12 +59,39 @@ const sellCars = () => {
           <meta name="description" content={description} />
           <meta
             name="keywords"
-            content="sell your used car, sell your car, selling used car, sell cars online, sell your car, selling your used car, sell your used cars online"
+            content="Unifi Cars, buy used cars, sell used cars, used car marketplace, pre-owned vehicles, certified used cars, second-hand cars"
           />
           <meta
             name="robots"
             content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
           />
+          <meta
+            property="og:title"
+            content="Buy & Sell Used Cars Online | Trusted Marketplace - Unifi Cars"
+          />
+          <meta
+            property="og:description"
+            content="Unifi Cars offers a seamless platform to buy and sell used cars. Find certified pre-owned vehicles at great prices. Start your car search today!"
+          />
+          <meta property="og:url" content="https://unificars.com/" />
+          <meta
+            property="og:image"
+            content="https://unificars.com/logo.png"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:title"
+            content="Buy & Sell Used Cars Online | Trusted Marketplace - Unifi Cars"
+          />
+          <meta
+            name="twitter:description"
+            content="Unifi Cars is the go-to platform for buying and selling used cars. Explore a wide selection of pre-owned vehicles today!"
+          />
+          <meta
+            name="twitter:image"
+            content="https://unificars.com/logo.png"
+          />
+
           <link rel="canonical" href={canonicalUrl} />
         </Head>
 

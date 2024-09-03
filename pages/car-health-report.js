@@ -238,9 +238,9 @@ const pdi = ({ isOpen, onClose }) => {
     rzp.open();
   };
 
-  const title = "Get Accurate Car Health Report- Unifi Cars";
+  const title = "Online Car Health Report | Instant Vehicle Diagnostics";
   const description =
-    "Our advanced and accurate car health report highlights the health of your car's engine, exteriors, interiors, tires etc. to keep your car in mint condition.";
+    "Generate a complete car health report online with Unifi Cars. Get instant diagnostics and insights into your vehicle's condition.";
   const canonicalUrl = "https://unificars.com/car-health-report";
 
   // animation logic
@@ -336,12 +336,42 @@ const pdi = ({ isOpen, onClose }) => {
         <meta name="description" content={description} />
         <meta
           name="keywords"
-          content=" vehicle health report, car health report, vehicle health check, comprehensive car health checkup, car health report online, used car health report"
+          content="car health report, vehicle diagnostics, online car inspection, car condition report, car health check, Unifi Cars"
         />
         <meta
           name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
         />
+        <meta
+          property="og:title"
+          content="Online Car Health Report | Instant Diagnostics - Unifi Cars"
+        />
+        <meta
+          property="og:description"
+          content="Get a detailed car health report online with Unifi Cars. Access instant diagnostics to understand your vehicle's condition. Perfect for buyers and sellers!"
+        />
+        <meta
+          property="og:url"
+          content="https://unificars.com/car-health-report"
+        />
+        <meta
+          property="og:image"
+          content="https://unificars.com/logo.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Online Car Health Report | Quick Diagnostics - Unifi Cars"
+        />
+        <meta
+          name="twitter:description"
+          content="Unifi Cars offers an easy way to generate a car health report online. Get quick insights and diagnostics on your vehicle's condition today!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://unificars.com/logo.png"
+        />
+
         <link rel="canonical" href={canonicalUrl} />
         {/* Add other meta tags if needed */}
       </Head>
@@ -353,6 +383,7 @@ const pdi = ({ isOpen, onClose }) => {
               width={3840 / 3}
               height={1488 / 3}
               src="/pdi-new.png"
+              alt="Car health Report"
               className="w-full h-full object-cover"
             />
           </div>
@@ -362,10 +393,10 @@ const pdi = ({ isOpen, onClose }) => {
               {step === 1 && (
                 <div>
                   <div className="flex gap-4 justify-center items-center">
-                    <h2 className="text-2xl font-black mb-4 text-center">
+                    <h1 className="text-2xl font-black mb-4 text-center">
                       Used Car Health Report Know Before You Buy
                       {/* <span className="text-orange-500"> </span> */}
-                    </h2>
+                    </h1>
                   </div>
                   <input
                     className="w-full mb-2 p-2 border border-gray-300 rounded"
@@ -659,9 +690,9 @@ const pdi = ({ isOpen, onClose }) => {
             width="280"
           />
           <div className="text-left space-y-4 py-4">
-            <h4 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4 text-center">
+            <h3 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4 text-center">
               Hidden Accident History
-            </h4>
+            </h3>
             <p className="text-lg text-center">
               <span className="text-orange-500 font-semibold">40%</span> of used
               cars have some accidental history
@@ -677,9 +708,9 @@ const pdi = ({ isOpen, onClose }) => {
             width="280"
           />
           <div className="text-left space-y-4 py-4">
-            <h4 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4 text-center">
+            <h3 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4 text-center">
               Fake Service History
-            </h4>
+            </h3>
             <p className="text-lg text-center">
               <span className="text-orange-500 font-semibold">15%</span> of used
               car sales have fabricated service records
@@ -695,9 +726,9 @@ const pdi = ({ isOpen, onClose }) => {
             width="280"
           />
           <div className="text-left space-y-4 py-4">
-            <h4 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4 text-center">
+            <h3 className="text-xl text-black font-bold tracking-widest mt-4 flex-none buyh4 text-center">
               Tampered Odometers
-            </h4>
+            </h3>
             <p className="text-lg text-center">
               <span className="text-orange-500 font-semibold">20-30%</span> of
               used car sales have fabricated service records
@@ -713,9 +744,9 @@ const pdi = ({ isOpen, onClose }) => {
             width="280"
           />
           <div className="text-left space-y-4 py-4">
-            <h4 className="text-xl text-black font-black tracking-widest mt-4 flex-none buyh4 text-center">
+            <h3 className="text-xl text-black font-black tracking-widest mt-4 flex-none buyh4 text-center">
               Water Damage
-            </h4>
+            </h3>
             <p className="text-lg text-center">
               <span className="text-orange-500 font-semibold">1 Lakh+</span> by
               floods annually, resulting in water damage, rust, and electrical
@@ -727,10 +758,10 @@ const pdi = ({ isOpen, onClose }) => {
       {/* fault card end here */}
 
       <div className="mt-16 md:px-20 px-4 space-y-6">
-        <h1 className="text-center font-black text-4xl">
+        <h2 className="text-center font-black text-4xl">
           <span className="text-orange-500 font-semibold">What </span>
           Do You Get?
-        </h1>
+        </h2>
         <WhatDoYouGet />
       </div>
 
@@ -745,27 +776,27 @@ const pdi = ({ isOpen, onClose }) => {
         </div>
         <div className="flex flex-wrap-reverse md:flex-nowrap container mx-auto gap-4 md:px-20 px-4">
           <div className="text-xl  text-black">
-            <h2 className="py-2 font-bold">Engine and Transmission:</h2>
+            <h3 className="py-2 font-bold">Engine and Transmission:</h3>
             <p className="text-lg text-gray-700 my-2">
               Thorough checks of the engine, transmission, and related
               components to ensure smooth and efficient performance.
             </p>
-            <h2 className="py-2 font-bold">Brakes and Suspension:</h2>
+            <h3 className="py-2 font-bold">Brakes and Suspension:</h3>
             <p className="text-lg text-gray-700 my-2">
               Inspection of the brake system, suspension, and steering for
               optimal safety and handling.
             </p>
-            <h2 className="py-2 font-bold">Electrical Systems:</h2>
+            <h3 className="py-2 font-bold">Electrical Systems:</h3>
             <p className="text-lg text-gray-700 my-2">
               Testing of all electrical systems, including the battery,
               alternator, and lighting.
             </p>
-            <h2 className="py-2 font-bold">Interior and Exterior:</h2>
+            <h3 className="py-2 font-bold">Interior and Exterior:</h3>
             <p className="text-lg text-gray-700 my-2">
               Examination of the car’s interior and exterior for any signs of
               wear, damage, or defects.
             </p>
-            <h2 className="py-2 font-bold">Safety Features:</h2>
+            <h3 className="py-2 font-bold">Safety Features:</h3>
             <p className="text-lg text-gray-700 my-2">
               Verification of all safety features, such as airbags, seat belts,
               and anti-lock braking systems.

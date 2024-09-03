@@ -5,10 +5,10 @@ const HowToSell = () => {
   return (
     <div className="relative container mx-auto px-4 my-12">
       <div className="text-4xl min-w-[50] mx-auto md:px-6 px-2 order-last lg:order-first text-center mb-4">
-        <h3 className="font-black">
+        <h2 className="font-black">
           <span className="text-orange-500 sellheadfont">How</span>
           <span className="sellheadfont"> to Sell!</span>
-        </h3>
+        </h2>
       </div>
       <p className="text-center mb-4 hiwpara">
         Sell your Used Car in Three Simple Steps
@@ -31,9 +31,9 @@ const HowToSell = () => {
             alt="submit car details"
           />
           <div className="text-left space-y-4 p-4">
-            <h4 className="text-xl text-black font-bold mt-4 flex-none">
+            <h3 className="text-xl text-black font-bold mt-4 flex-none">
               SUBMIT YOUR CAR DETAILS
-            </h4>
+            </h3>
             <p className="text-lg">
               Provide simple details of your car like brand, model, year and
               mileage for accurate price.
@@ -57,9 +57,9 @@ const HowToSell = () => {
             alt="car valuation"
           />
           <div className="text-left space-y-4 p-4">
-            <h4 className="text-xl text-black font-bold mt-4 flex-none">
+            <h3 className="text-xl text-black font-bold mt-4 flex-none">
               GET QUICK VALUATION
-            </h4>
+            </h3>
             <p className="text-lg">
               Our advance technology quickly analyze your car price and get the
               estimate value of your car.
@@ -69,7 +69,8 @@ const HowToSell = () => {
 
         <div
           className="relative text-center justify-center my-4 bg-[#FBFBFB] text-black p-2 rounded-lg 
-      md:w-[45%] overflow-hidden">
+      md:w-[45%] overflow-hidden"
+        >
           <Image
             width={100}
             height={100}
@@ -85,9 +86,9 @@ const HowToSell = () => {
             alt="payment methods"
           />
           <div className="text-left space-y-4 p-4">
-            <h4 className="text-xl text-black font-bold mt-4 flex-none">
+            <h3 className="text-xl text-black font-bold mt-4 flex-none">
               EASY PAYMENT METHODS
-            </h4>
+            </h3>
             <p className="text-lg">
               We Provide you online payment options according to your
               suitability after deal finalized

@@ -135,9 +135,9 @@ const about = () => {
     p: 4,
   };
 
-  const title = "Scrap your Car to get the Best Price- Unifi Cars";
+  const title = "Scrap Your Car for the Best Price - Unifi Cars";
   const description =
-    "Unifi Cars helps you in the scrap car process  of cars so that you get the best value at the comfort of your home. Our team handles all legal process.";
+    "Scrap your car with Unifi Cars and get the best price in the market. Enjoy a hassle-free process, instant quotes, and eco-friendly car disposal.";
   const canonicalUrl = "https://unificars.com/scrap-car";
 
   return (
@@ -147,12 +147,39 @@ const about = () => {
         <meta name="description" content={description} />
         <meta
           name="keywords"
-          content="best scrap cars price, scrapping old vehicles, scrap car, sell scrap car, scrap your old unfit vehicle, scrap your old unfit vehicle"
+          content="scrap your car, car scrapping service, best price for scrap car, car recycling, scrap car online, Unifi Cars"
         />
         <meta
           name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
         />
+        <meta
+          property="og:title"
+          content="Scrap Your Car for the Best Price - Unifi Cars"
+        />
+        <meta
+          property="og:description"
+          content="Unifi Cars offers a simple way to scrap your car and get the best price. Enjoy a hassle-free process and eco-friendly disposal. Get an instant quote now!"
+        />
+        <meta property="og:url" content="https://unificars.com/scrap-cars" />
+        <meta
+          property="og:image"
+          content="https://unificars.com/logo.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Scrap Your Car for the Best Price | Quick & Easy - Unifi Cars"
+        />
+        <meta
+          name="twitter:description"
+          content="Scrap your old car with Unifi Cars for the best price. Experience a quick, hassle-free process with instant quotes and eco-friendly disposal."
+        />
+        <meta
+          name="twitter:image"
+          content="https://unificars.com/logo.png"
+        />
+
         <link rel="canonical" href={canonicalUrl} />
         {/* Add other meta tags if needed */}
       </Head>
@@ -215,9 +242,9 @@ const about = () => {
 
       <div className="relative max-w-5xl mx-auto px-4 pt-16">
         {/* <div className="absolute w-full h-60 -z-10 rounded-lg top-4"></div> */}
-        <h1 className="py-2 font-bold text-center text-3xl text-black">
+        <h2 className="py-2 font-bold text-center text-3xl text-black">
           Benefits of scraping car with Unifi cars
-        </h1>
+        </h2>
         {/* <p className="text-center mb-8 hiwpara">keys to cash unlock the value of your car</p> */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
           <div className="bg-gray-100 text-black p-6 py-12 rounded-lg shadow-md min-h-56 place-content-center">
@@ -225,7 +252,7 @@ const about = () => {
               src="/scrap-car-price.png"
               className="h-12 object-cover rounded-lg mb-4"
             />
-            <h4 className="text-base font-bold mb-2">Get Best Price</h4>
+            <h3 className="text-base font-bold mb-2">Get Best Price</h3>
             <p className="mb-4">
               Get an accurate and fair quote for scrapping your car and helping
               the environment.
@@ -237,9 +264,9 @@ const about = () => {
               src="/scrap-car-certificate.png"
               className="h-12 object-cover rounded-lg mb-4 invert"
             />
-            <h4 className="text-base font-bold mb-2">
+            <h3 className="text-base font-bold mb-2">
               Instant Disposal Certificate
-            </h4>
+            </h3>
             <p className="mb-4">
               Get benefits on buying a new car with a Certificate of deposit.
             </p>
@@ -250,7 +277,7 @@ const about = () => {
               src="/scrap-car-transparency.png"
               className="h-12 object-cover rounded-lg mb-4"
             />
-            <h4 className="text-base font-bold mb-2">Transparency</h4>
+            <h3 className="text-base font-bold mb-2">Transparency</h3>
             <p className="mb-4">
               Unifi Cars partners only with Government-registered vendors.
             </p>
@@ -259,11 +286,11 @@ const about = () => {
       </div>
 
       <div className="max-w-6xl mx-2 md:mx-auto p-6 md:p-8 bg-white carousel-item border mt-16 rounded-md flex items-center justify-around gap-4 flex-wrap">
-        <h1 className="py-2 font-black text-4xl text-black">
+        <h2 className="py-2 font-black text-4xl text-black">
           Steps to scrap your car
           <br />
           with Unifi cars
-        </h1>
+        </h2>
 
         <div className="grid gap-6 w-[400px] text-lg font-semibold">
           <div className="flex items-start space-x-3">
@@ -378,9 +405,9 @@ const about = () => {
         </div>
       </div> */}
       <div className="max-w-6xl mx-auto p-2 md:p-6 rounded-md mt-16">
-        <h1 className="py-2 text-center text-3xl font-bold text-black">
+        <h2 className="py-2 text-center text-3xl font-bold text-black">
           When Is It Time to Scrap Your Car?
-        </h1>
+        </h2>
         <div className="flex flex-wrap md:flex-nowrap px-4 md:w-[80%] mx-auto gap-6 justify-items-center">
           {[
             { type: "Private Vehicle", petrol: "15 Years", diesel: "10 Years" },

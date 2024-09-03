@@ -25,13 +25,15 @@ const BannerCarousel = () => {
       <div className="hidden md:flex relative w-full h-[35rem]">
         {/* Text section */}
         <div
-          className={`absolute left-0 top-0 w-1/2 h-full bg-white bg-opacity-80 px-20 z-10 flex flex-col justify-center `}>
+          className={`absolute left-0 top-0 w-1/2 h-full bg-white bg-opacity-80 px-20 z-10 flex flex-col justify-center `}
+        >
           <Carousel
             className=""
             showStatus={false}
             showThumbs={false}
             infiniteLoop
-            autoPlay>
+            autoPlay
+          >
             <div>
               <h1 className="text-5xl font-bold mb-4 banheadfont">
                 Choose Reliability, Choose Your New Car.
@@ -42,7 +44,8 @@ const BannerCarousel = () => {
               </p>
               <button
                 className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 font-sans"
-                style={{ width: "fit-content", float: "left" }}>
+                style={{ width: "fit-content", float: "left" }}
+              >
                 Buy Car
               </button>
             </div>
@@ -56,7 +59,8 @@ const BannerCarousel = () => {
               </p>
               <button
                 className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 font-sans"
-                style={{ width: "fit-content", float: "left" }}>
+                style={{ width: "fit-content", float: "left" }}
+              >
                 Sell Car
               </button>
             </div>
@@ -83,7 +87,7 @@ const BannerCarousel = () => {
               style={{ height: "400px" }}
               alt="Car Image"
             />
-            <div className="absolute left-0 top-0 w-1/2 h-full text-black p-5 flex flex-col justify-center w-full z-10">
+            <div className="absolute left-0 top-0 h-full text-black p-5 flex flex-col justify-center w-full z-10">
               <h1 className="text-3xl mb-2 font-bold">
                 Choose Reliability, Choose Your New Car.
               </h1>

@@ -74,18 +74,45 @@ function index() {
   return (
     <>
       <Head>
-        <title>Buy and Sell Used Cars with Best Price- Unificars</title>
+        <title>Buy & Sell Used Cars Online at Best Price - Unifi Cars</title>
         <meta
           name="description"
-          content="Buy and Sell used cars at Unifi Cars in just 29 minutes. We provide free home inspection, offers 100% verified used cars with easy RC transfer."
+          content="Unifi Cars is your trusted online marketplace for buying and selling used cars. Explore a wide range of certified pre-owned vehicles at competitive prices!"
         />
         <meta
           name="keywords"
-          content="buy & sell used cars in delhi, buy and sell used cars online, buy and sell used car in delhi, buy and sell second hand cars in india, buying & selling used car, buying & selling used car in delhi"
+          content="Cars, buy used cars, sell used cars, used car marketplace, pre-owned vehicles, certified used cars, second-hand cars"
         />
         <meta
           name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
+        <meta
+          property="og:title"
+          content="Buy & Sell Used Cars Online | Trusted Marketplace -F Unifi Cars"
+        />
+        <meta
+          property="og:description"
+          content="Unifi Cars offers a seamless platform to buy and sell used cars. Find certified pre-owned vehicles at great prices. Start your car search today!"
+        />
+        <meta property="og:url" content="https://unificars.com/" />
+        <meta
+          property="og:image"
+          content="https://unificars.com/logo.png"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Buy & Sell Used Cars Online | Trusted Marketplace - Unifi Cars"
+        />
+        <meta
+          name="twitter:description"
+          content="Unifi Cars is the go-to platform for buying and selling used cars. Explore a wide selection of pre-owned vehicles today!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://unificars.com/logo.png"
         />
         <link rel="canonical" href="https://unificars.com" />
       </Head>
@@ -108,9 +135,9 @@ function index() {
                   autoPlay={true}
                 >
                   <div>
-                    <h2 className="text-5xl font-black banheadfont">
+                    <h3 className="text-5xl font-black banheadfont">
                       Choose Reliability, Choose Your New Car
-                    </h2>
+                    </h3>
                     <p className="text-lg my-4 mb-6 text-left font-sans">
                       Trusted by over 1 Lakh customers. Choose from 5000+ Unifi
                       Assured Cars
@@ -127,11 +154,9 @@ function index() {
                   </div>
 
                   <div>
-                    <h1 className="text-5xl font-black banheadfont">
-                      Sell Your Car with
-                      <br />
-                      Unifi Cars
-                    </h1>
+                    <h2 className="text-5xl font-black banheadfont">
+                      Sell Your Car with Unifi Cars
+                    </h2>
                     <p className="text-lg my-4 mb-6 text-left font-sans">
                       Experience a transparent and hassle-free car selling
                       journey with Us.
@@ -200,9 +225,9 @@ function index() {
                   </div>
 
                   <div className="flex flex-col mx-4 items-start justify-start">
-                    <h2 className="text-2xl mb-2 font-bold text-start">
+                    <h3 className="text-2xl mb-2 font-bold text-start">
                       Choose Reliability, Choose Your New Car
-                    </h2>
+                    </h3>
                     <p className="text-sm mb-4 text-start">
                       Trusted by over 1 Lakh customers. Choose from 5000+ Unifi
                       Assured Cars
@@ -223,10 +248,10 @@ function index() {
 
         <div className="relative container mx-auto px-4 my-6">
           <div className="text-4xl min-w-[50] mx-auto mb-6 px-2 md:px-6 order-last lg:order-first text-center">
-            <h3 className="font-bold">
+            <h1 className="font-bold">
               <span className="text-orange-500 sellheadfont">What</span>
               <span className="sellheadfont"> We Do</span>
-            </h3>
+            </h1>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 h-full">
@@ -241,7 +266,7 @@ function index() {
                     alt="Sell Car"
                   />
                 </div>
-                <h4 className="text-2xl font-bold buyh4">Sell Car</h4>
+                <h3 className="text-2xl font-bold buyh4">Sell Car</h3>
                 <p className="text-lg">
                   Sell your car easily with us and get better offers with hassle
                   free process and instant payment.
@@ -260,7 +285,7 @@ function index() {
                     alt="Buy Car"
                   />
                 </div>
-                <h4 className="text-2xl font-bold buyh4">Buy Car</h4>
+                <h3 className="text-2xl font-bold buyh4">Buy Car</h3>
                 <p className="text-lg">
                   Explore top quality used cars at unbeatable price. Enjoy
                   stress free car buying experience.
@@ -279,7 +304,7 @@ function index() {
                     alt="Car Health Report"
                   />
                 </div>
-                <h4 className="text-2xl font-bold buyh4">Car Health Report</h4>
+                <h3 className="text-2xl font-bold buyh4">Car Health Report</h3>
                 <p className="text-lg">
                   Car health report ensures the safety with 210 check points
                   covering by certified professionals
@@ -298,7 +323,7 @@ function index() {
                     alt="Challan Check"
                   />
                 </div>
-                <h4 className="text-2xl font-black buyh4">Challan Check</h4>
+                <h3 className="text-2xl font-black buyh4">Challan Check</h3>
                 <p className="text-lg">
                   Stay informed & avoid penalties with our direct and easy
                   process to fill your traffic challan online.

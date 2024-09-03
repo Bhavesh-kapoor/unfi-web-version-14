@@ -145,7 +145,8 @@ const VehicleInfo = () => {
                 onClick={() => {
                   setValue(tabValue);
                 }}
-                className="mx-2">
+                className="mx-2"
+              >
                 <CloseIcon className="text-sm" />
               </button>
             </div>
@@ -472,7 +473,8 @@ const VehicleInfo = () => {
       <div className="gap-4 flex flex-col z-10 rounded-md">
         {screen === 1 && (
           <div
-            className={`p-4 flex flex-col justify-center items-start gap-4 w-full`}>
+            className={`p-4 flex flex-col justify-center items-start gap-4 w-full`}
+          >
             <div className="flex flex-wrap gap-4 items-center  w-full max-w-full overflow-hidden">
               <span className="text-2xl font-semibold">
                 Enter your car registration number
@@ -524,11 +526,12 @@ const VehicleInfo = () => {
                   {!hideAnimation && (
                     <div
                       className="absolute top-0 m-auto w-full h-full z-10 flex items-center"
-                      onClick={handleHideAnimation}>
+                      onClick={handleHideAnimation}
+                    >
                       <div>
-                        <h1 className="ml-4 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-xl text-gray-500">
+                        <h4 className="ml-4 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-xl text-gray-500">
                           DL XX AC XXXX
-                        </h1>
+                        </h4>
                       </div>
                     </div>
                   )}
@@ -543,7 +546,8 @@ const VehicleInfo = () => {
               ) : (
                 <button
                   className="w-48 h-14 bg-blue-500 text-white md:px-7 py-4 rounded-lg hover:bg-blue-600 text-base font-sans"
-                  onClick={submitCarNumber}>
+                  onClick={submitCarNumber}
+                >
                   Get Price
                 </button>
               )}
@@ -553,9 +557,9 @@ const VehicleInfo = () => {
               <span className="mx-5 text-black text-base font-sans"> OR </span>
               <div className="w-full border-t border-gray-500"></div>
             </div>
-            <h1 className="text-2xl font-bold text-black mt-4">
+            <h2 className="text-2xl font-bold text-black mt-4">
               Choose your model
-            </h1>
+            </h2>
 
             {/* <Divider className="w-3/4" />
               <p className="text-md text-[#465166]">or</p>
@@ -647,7 +651,8 @@ const VehicleInfo = () => {
                     setOtpSend(false);
                     setBookedStatus(true);
                     setIsDisabled(false);
-                  }}>
+                  }}
+                >
                   Edit
                 </button>
               </div>
@@ -669,7 +674,8 @@ const VehicleInfo = () => {
                   margin: "auto",
                 }}
                 variant="scrollable"
-                indicatorColor="warning">
+                indicatorColor="warning"
+              >
                 {tabs.map((tab) => {
                   return customTab(tab.label, tab.value);
                 })}
@@ -765,7 +771,8 @@ const VehicleInfo = () => {
                 <div
                   onClick={() => handlePlaningToSell(item)}
                   className="px-4 p-2 cursor-pointer hover:shadow-xl hover:scale-105 transition-all duration-200 hover:bg-[#f38102] hover:text-white rounded-lg border-2 w-full text-center"
-                  key={index}>
+                  key={index}
+                >
                   <div className="text-lg font-semibold">{item}</div>
                 </div>
               ))}
@@ -823,12 +830,14 @@ const VehicleInfo = () => {
                       <div className="flex justify-between gap-2 my-2">
                         <button
                           onClick={HandleVerifyOTP}
-                          className="w-full p-2 text-base text-center bg-[#f38102] text-white rounded shadow hover:bg-black hover:text-white transition-all duration-200 ease-in-out ">
+                          className="w-full p-2 text-base text-center bg-[#f38102] text-white rounded shadow hover:bg-black hover:text-white transition-all duration-200 ease-in-out "
+                        >
                           Verify OTP
                         </button>
                         <button
                           onClick={HandleEditNumber}
-                          className="w-full p-2 text-base text-center bg-[#f38102] text-white rounded shadow hover:bg-black hover:text-white transition-all duration-200 ease-in-out ">
+                          className="w-full p-2 text-base text-center bg-[#f38102] text-white rounded shadow hover:bg-black hover:text-white transition-all duration-200 ease-in-out "
+                        >
                           Edit Number
                         </button>
                       </div>
@@ -837,7 +846,8 @@ const VehicleInfo = () => {
                     <div className="w-full">
                       <button
                         onClick={HandleGetOtp}
-                        className="w-full p-2 text-base text-center bg-[#f38102] text-white rounded shadow hover:bg-black hover:text-white transition-all duration-200 ease-in-out ">
+                        className="w-full p-2 text-base text-center bg-[#f38102] text-white rounded shadow hover:bg-black hover:text-white transition-all duration-200 ease-in-out "
+                      >
                         GET OTP
                       </button>
                     </div>

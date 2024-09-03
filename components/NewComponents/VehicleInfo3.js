@@ -526,9 +526,9 @@ const VehicleInfo = () => {
                       className="absolute top-0 m-auto w-full h-full z-10 flex items-center"
                       onClick={handleHideAnimation}>
                       <div>
-                        <h1 className="ml-4 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-xl text-gray-500">
+                        <h4 className="ml-4 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-xl text-gray-500">
                           DL XX AC XXXX
-                        </h1>
+                        </h4>
                       </div>
                     </div>
                   )}

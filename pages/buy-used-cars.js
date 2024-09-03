@@ -23,18 +23,44 @@ const BuyUsedCars = ({ initialCars, initialTotalItems, featuredCars }) => {
   return (
     <>
       <Head>
-        <title>Buy Used Car Online with Unifi Cars</title>
+        <title>Buy Used Cars Online | Certified Pre-Owned Vehicles</title>
         <meta
           name="description"
-          content="Buy best quality used car at Unifi Cars. Choose from over 1000+ fully inspected car models with 210 checkpoints at best price in industry."
+          content="Explore a wide range of certified used cars at Unifi Cars. Buy used cars online with confidence, competitive pricing, and quality assurance."
         />
         <meta
           name="keywords"
-          content="Unificars, Unifi Cars, Direct Seller Cars, used cars in moti nagar, 210 Inspected points, Easy finance, Buy use Car in delhi, Buy Unificars Used Car, buy used car in moti nagar, Unificars Certified Cars, used car, used cars, buy used car, buy used cars, buy second hand cars, buy a used car, certified used car, inspected used car, used car in kirti nagar, buy used car online"
+          content="buy used cars, buy pre-owned cars, certified used cars, online car buying, affordable used cars, Unifi Cars"
         />
         <meta
           name="robots"
           content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
+        <meta
+          property="og:title"
+          content="Buy Used Cars Online | Certified Pre-Owned Vehicles - Unifi Cars"
+        />
+        <meta
+          property="og:description"
+          content="Discover a vast selection of certified used cars at Unifi Cars. Enjoy a reliable and convenient online car buying experience. Start browsing today!"
+        />
+        <meta property="og:url" content="https://unificars.com/buy-used-cars" />
+        <meta
+          property="og:image"
+          content="https://unificars.com/logo.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Buy Used Cars Online | Certified Pre-Owned - Unifi Cars"
+        />
+        <meta
+          name="twitter:description"
+          content="Find your next car at Unifi Cars. We offer certified pre-owned vehicles with competitive pricing and a seamless online buying process."
+        />
+        <meta
+          name="twitter:image"
+          content="https://unificars.com/logo.png"
         />
         <link rel="canonical" href="https://unificars.com/buy-used-cars" />
       </Head>
