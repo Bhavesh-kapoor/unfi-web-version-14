@@ -98,47 +98,45 @@ const Challan = () => {
   return (
     <div>
       <Head>
-        <title>Check E-Challan Online | E-Challan Status - Unifi Cars</title>
+        <title>
+          E Challan Check by Vehicle Number | Check E Challan Online
+        </title>
         <meta
           name="description"
-          content="Easily check E-challan online with Unifi Cars. Get real-time updates, and manage traffic violations quickly. Check vehicle's e-challan status today!"
+          content="E Challan Check by Vehicle Number made easy at UnifiCars. Quickly enter your vehicle number to pay or check e-challan online. Stay tuned with our service."
         />
         <meta
           name="keywords"
-          content="check e-challan, e-challan status, online e-challan, Unifi Cars"
+          content="E Challan Check by Vehicle Number, Check E Challan Online, Online Challan Payment, Pay Challan Online, E Challan Status, Unificars"
         />
-        <meta
-          name="robots"
-          content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
-        />
+
         <meta
           property="og:title"
-          content="Check Your E-Challan Online | Fast & Easy - Unifi Cars"
+          content="E Challan Check by Vehicle Number | Check E Challan Online"
         />
         <meta
           property="og:description"
-          content="Unifi Cars makes it simple to check your E-challan status online. Get real-time updates, pay fines, and manage your traffic violations effortlessly. Stay on top of your e-challan status now!"
+          content="E Challan Check by Vehicle Number made easy at UnifiCars. Quickly enter your vehicle number to pay or check e-challan online. Stay tuned with our service."
         />
-        <meta property="og:url" content="https://unificars.com/challan-check" />
         <meta
-          property="og:image"
-          content="https://unificars.com/logo.png"
+          property="og:url"
+          content="https://www.unificars.com/challan-check"
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="enter image url" />
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Check Your E-Challan Online | Quick & Easy - Unifi Cars"
+          content="E Challan Check by Vehicle Number | Check E Challan Online"
         />
         <meta
           name="twitter:description"
-          content="Easily check your e-challan status online with Unifi Cars. Manage traffic fines and violations quickly and stay updated with real-time information."
+          content="Quickly check and pay your e-challan online by entering your vehicle number. Unificars.com offers a fast and secure service."
         />
-        <meta
-          name="twitter:image"
-          content="https://unificars.com/logo.png"
-        />
+        <meta name="twitter:image" content="enter image url" />
 
-        <link rel="canonical" href="https://unificars.com/challan-check" />
+        <link rel="canonical" href="https://www.unificars.com/challan-check" />
       </Head>
 
       <div className='bg-[url("/background/abtbg.jpg")]'>
