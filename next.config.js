@@ -25,6 +25,21 @@ const nextConfig = {
 
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'unificars.com', // replace with your non-www domain
+          },
+        ],
+        permanent: true,
+        destination: 'https://www.unificars.com', // replace with your www domain
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
