@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const HowToSell = ({ hideText, processText }) => {
+const HowToSell = ({ hideText, processText, sellData }) => {
   return (
     <div className="relative container mx-auto px-4 my-12">
       {!hideText && (
@@ -35,87 +35,114 @@ const HowToSell = ({ hideText, processText }) => {
         </div>
       )}
 
-      <div className="flex lg:gap-6 md:flex-row flex-col w-full lg:px-10">
-        <div className="relative text-center justify-center my-4 bg-[#FBFBFB] text-black p-2 rounded-lg md:w-[45%] overflow-hidden">
-          <Image
-            width={100}
-            height={100}
-            src="/sell-fast.png"
-            alt="Fast"
-            className="absolute -top-5 -left-5 w-32"
-          />
-          <Image
-            width={400}
-            height={400}
-            src="/carousel/carousel-new-1.png"
-            className="img-fluid w-full object-cover h-80 md:h-48 lg:h-80 rounded-xl"
-            alt="submit car details"
-          />
-          <div className="text-left space-y-2 lg:space-y-4 p-2 lg:p-4">
-            <h3 className="text-xl md:text-lg lg:text-xl text-black font-bold mt-4 flex-none">
-              SUBMIT YOUR CAR DETAILS
-            </h3>
-            <p className="text-lg">
-              Provide simple details of your car like brand, model, year and
-              mileage for accurate price.
-            </p>
+      {!sellData && (
+        <div className="flex lg:gap-6 md:flex-row flex-col w-full lg:px-10">
+          <div className="relative text-center justify-center my-4 bg-[#FBFBFB] text-black p-2 rounded-lg md:w-[45%] overflow-hidden">
+            <Image
+              width={100}
+              height={100}
+              src="/sell-fast.png"
+              alt="Fast"
+              className="absolute -top-5 -left-5 w-32"
+            />
+            <Image
+              width={400}
+              height={400}
+              src="/carousel/carousel-new-1.png"
+              className="img-fluid w-full object-cover h-80 md:h-48 lg:h-80 rounded-xl"
+              alt="submit car details"
+            />
+            <div className="text-left space-y-2 lg:space-y-4 p-2 lg:p-4">
+              <h3 className="text-xl md:text-lg lg:text-xl text-black font-bold mt-4 flex-none">
+                SUBMIT YOUR CAR DETAILS
+              </h3>
+              <p className="text-lg">
+                Provide simple details of your car like brand, model, year and
+                mileage for accurate price.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="relative text-center justify-center my-4 bg-[#FBFBFB] text-black p-2 rounded-lg md:w-[45%] overflow-hidden">
-          <Image
-            width={100}
-            height={100}
-            src="/sell-fair.png"
-            alt="fair"
-            className="absolute -top-5 -left-5 w-32"
-          />
-          <Image
-            src="/carousel/carousel-new-2.png"
-            className="img-fluid w-full object-cover h-80 md:h-48 lg:h-80 rounded-xl"
-            height={400}
-            width={400}
-            alt="car valuation"
-          />
-          <div className="text-left space-y-2 lg:space-y-4 p-2 lg:p-4">
-            <h3 className="text-xl md:text-lg lg:text-xl text-black font-bold mt-4 flex-none">
-              GET QUICK VALUATION
-            </h3>
-            <p className="text-lg">
-              Our advance technology quickly analyze your car price and get the
-              estimate value of your car.
-            </p>
+          <div className="relative text-center justify-center my-4 bg-[#FBFBFB] text-black p-2 rounded-lg md:w-[45%] overflow-hidden">
+            <Image
+              width={100}
+              height={100}
+              src="/sell-fair.png"
+              alt="fair"
+              className="absolute -top-5 -left-5 w-32"
+            />
+            <Image
+              src="/carousel/carousel-new-2.png"
+              className="img-fluid w-full object-cover h-80 md:h-48 lg:h-80 rounded-xl"
+              height={400}
+              width={400}
+              alt="car valuation"
+            />
+            <div className="text-left space-y-2 lg:space-y-4 p-2 lg:p-4">
+              <h3 className="text-xl md:text-lg lg:text-xl text-black font-bold mt-4 flex-none">
+                GET QUICK VALUATION
+              </h3>
+              <p className="text-lg">
+                Our advance technology quickly analyze your car price and get
+                the estimate value of your car.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div
-          className="relative text-center justify-center my-4 bg-[#FBFBFB] text-black p-2 rounded-lg 
+          <div
+            className="relative text-center justify-center my-4 bg-[#FBFBFB] text-black p-2 rounded-lg 
       md:w-[45%] overflow-hidden"
-        >
-          <Image
-            width={100}
-            height={100}
-            src="/sell-done.png"
-            className="absolute -top-5 -left-5 w-32"
-            alt="sell done"
-          />
-          <Image
-            width={400}
-            height={400}
-            src="/carousel/carousel-new-4.png"
-            className="img-fluid w-full object-cover h-80 md:h-48 lg:h-80 rounded-xl"
-            alt="payment methods"
-          />
-          <div className="text-left space-y-2 lg:space-y-4 p-2 lg:p-4">
-            <h3 className="text-xl md:text-lg lg:text-xl text-black font-bold mt-4 flex-none">
-              EASY PAYMENT METHODS
-            </h3>
-            <p className="text-lg">
-              We Provide you online payment options according to your
-              suitability after deal finalized
-            </p>
+          >
+            <Image
+              width={100}
+              height={100}
+              src="/sell-done.png"
+              className="absolute -top-5 -left-5 w-32"
+              alt="sell done"
+            />
+            <Image
+              width={400}
+              height={400}
+              src="/carousel/carousel-new-4.png"
+              className="img-fluid w-full object-cover h-80 md:h-48 lg:h-80 rounded-xl"
+              alt="payment methods"
+            />
+            <div className="text-left space-y-2 lg:space-y-4 p-2 lg:p-4">
+              <h3 className="text-xl md:text-lg lg:text-xl text-black font-bold mt-4 flex-none">
+                EASY PAYMENT METHODS
+              </h3>
+              <p className="text-lg">
+                We Provide you online payment options according to your
+                suitability after deal finalized
+              </p>
+            </div>
           </div>
         </div>
+      )}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10 lg:px-10">
+        {sellData &&
+          sellData.length > 0 &&
+          sellData.map((data, index) => {
+            return (
+              <div key={index} className="p-1 bg-orange-50/30 rounded-xl">
+                <Image
+                  width={400}
+                  height={400}
+                  unoptimized
+                  priority
+                  src={data?.imageUrl}
+                  className="w-full object-contain"
+                  alt="payment methods"
+                />
+                <div className="text-left space-y-2 lg:space-y-4 p-2 lg:p-4">
+                  <h3 className="text-xl md:text-lg lg:text-xl text-black font-bold mt-4 flex-none">
+                    {data?.title}
+                  </h3>
+                  <p className="">{data?.reason}</p>
+                </div>
+              </div>
+            );
+          })}
       </div>
     </div>
   );

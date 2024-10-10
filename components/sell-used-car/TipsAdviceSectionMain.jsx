@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const tips = [
-  "Complete Documentation: When you are planning to sell your car you have to keep all your documents including RC, insurance, and PUC. If your car has financed you have to share the original No-Objection Certificate (NOC) from the lender.",
-  "Service Your Car: As you know a well-maintained car gets a higher price. To get the best price of your car ensure that your car is serviced and free from any mechanical issues.",
-  "Determine Your Car's Value: You have to research the current market value of your car based on the make, model, year, and condition. You can take the help of some online platforms like Unifi Cars to get the estimated value of your car.",
-  "Secure Payment: You have to always prefer the secured payment methods like online method and offline method.",
+  "Registration Certificate (RC):  RC is the most crucial document offered by the RTO that shows the valid ownership and registration of the vehicle.",
+  "Insurance Papers: The insurance policy is the other crucial document required while selling your car. This shows that the car is insured, and the buyer will be covered in case of any damage to the car.",
+  "Registered owner KYC: KYC is a important car selling document that verifies buyer identity, meets legal requirements and builds trust on the time of selling.",
+  "Any other Relevant document: If you are selling your car in a different state, you need some significant documents like a No Objection Certificate (NOC) from the RTO.",
 ];
 
 const TipsAdviceSection = () => {
@@ -21,7 +21,7 @@ const TipsAdviceSection = () => {
         <div className="lg:w-1/2">
           <ul className="">
             {tips.map((tip, index) => (
-              <li key={index} className="mb-4 text-lg">
+              <li key={index} className="mb-4 text-base">
                 <strong>{tip.split(":")[0]}</strong>: {tip.split(":")[1]}
               </li>
             ))}

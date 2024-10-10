@@ -12,6 +12,25 @@ import WhySellToUnifiCarsSection from "@/components/sell-used-car/WhySellToUnifi
 
 const SellUsedCarsPage = () => {
   const router = useRouter();
+  const sellData = [
+    {
+      title: "Get an Instant Price Quote:",
+      reason:
+        "Enter your car's details on our website to receive an instant price quote.",
+      imageUrl: "/assets/Fast.png",
+    },
+    {
+      title: "Schedule an Inspection:",
+      reason:
+        "Our team will inspect your car at your convenience, either at your home or a nearby location.",
+      imageUrl: "/assets/Fair.png",
+    },
+    {
+      title: "Get Paid:",
+      reason: "Receive instant payment once the deal is finalized.",
+      imageUrl: "/assets/Done.png",
+    },
+  ];
   const { slug: location } = router.query;
   const canonicalUrl = "http://unificars.com/sell-used-car";
   const title = "Sell Used Cars Online | Unifi Cars";
@@ -81,7 +100,7 @@ const SellUsedCarsPage = () => {
           ensures a hassle-free experience.
         </p>
       </div>
-      <HowToSell hideText={true} />
+      <HowToSell hideText={true} sellData={sellData} />
       <HeaderSection location={location} />
       <TipsAdviceSection />
       <WhySellToUnifiCarsSection />

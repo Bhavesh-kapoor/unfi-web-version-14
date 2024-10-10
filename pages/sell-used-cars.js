@@ -54,6 +54,27 @@ const sellCars = () => {
 
   const [verifyNum, setVerifyNum] = useState(false);
 
+  const sellData = [
+    {
+      title: "Get an Instant Price Quote:",
+      reason:
+        "You just answer some question related to your car that helps us to understand your vehicle's condition and you get your car's approximate value.",
+      imageUrl: "/assets/Fast.png",
+    },
+    {
+      title: "Detailed Car Inspection:",
+      reason:
+        "Our car expert will examine your car from exterior to interior using our AI-based 210-point Inspection app and offer you the final price of your car.",
+      imageUrl: "/assets/Fair.png",
+    },
+    {
+      title: "Convenient Car Pick Up & Payment:",
+      reason:
+        "We will pick up your car and then transfer your amount directly into your bank account to ensure a smooth and hassle-free process.",
+      imageUrl: "/assets/Done.png",
+    },
+  ];
+
   return (
     <>
       <div className="pt-12">
@@ -106,7 +127,7 @@ const sellCars = () => {
           <VehicleInfo />
         </div>
         <TipsAdviceSection />
-        <Howtosell processText={true} hideText={true} />
+        <Howtosell processText={true} hideText={true} sellData={sellData} />
         <div className="container mx-auto px-4 md:px-6 lg:px-20">
           <h2 className="text-3xl md:text-4xl font-bold leading-snug text-center">
             What to Keep in Mind While Selling a Used Car

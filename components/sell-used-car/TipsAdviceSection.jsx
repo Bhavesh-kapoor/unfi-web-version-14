@@ -17,7 +17,7 @@ const TipsAdviceSection = () => {
         <div className="lg:w-1/2">
           <ul className="">
             {tips.map((tip, index) => (
-              <li key={index} className="mb-4 text-lg">
+              <li key={index} className="mb-4 text-base">
                 <strong>{tip.split(":")[0]}</strong>: {tip.split(":")[1]}
               </li>
             ))}
