@@ -50,12 +50,12 @@ function TestimonialCarousel({ testimonialData }) {
 
   const responsive = {
     superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1280 },
+      breakpoint: { max: 4000, min: 1180 },
       items: 3,
     },
     desktop: {
-      breakpoint: { max: 1280, min: 720 },
-      items: 3,
+      breakpoint: { max: 1180, min: 720 },
+      items: 2.5,
     },
     tablet: {
       breakpoint: { max: 720, min: 464 },

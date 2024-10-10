@@ -11,6 +11,9 @@ import HomeQuestions from "@/components/Home/HomeQuestions";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { sellTestimonialData } from "@/common/testimonialData";
 import { sellFaqData } from "@/common/faqData";
+import HeaderSection from "@/components/sell-used-car/HeaderSectionMainPage";
+import TipsAdviceSection from "@/components/sell-used-car/TipsAdviceSectionMain";
+import Image from "next/image";
 
 const sellCars = () => {
   const [OpenModal, setOpenModal] = useState(false);
@@ -74,10 +77,7 @@ const sellCars = () => {
             content="Unifi Cars offers a seamless platform to buy and sell used cars. Find certified pre-owned vehicles at great prices. Start your car search today!"
           />
           <meta property="og:url" content="https://unificars.com/" />
-          <meta
-            property="og:image"
-            content="https://unificars.com/logo.png"
-          />
+          <meta property="og:image" content="https://unificars.com/logo.png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta
             name="twitter:title"
@@ -87,18 +87,15 @@ const sellCars = () => {
             name="twitter:description"
             content="Unifi Cars is the go-to platform for buying and selling used cars. Explore a wide selection of pre-owned vehicles today!"
           />
-          <meta
-            name="twitter:image"
-            content="https://unificars.com/logo.png"
-          />
+          <meta name="twitter:image" content="https://unificars.com/logo.png" />
 
           <link rel="canonical" href={canonicalUrl} />
         </Head>
 
         <div className="text-center items-center flex flex-col mx-4">
-          <h1 className="text-2xl md:text-4xl text-black my-2 font-black">
+          <h4 className="text-2xl md:text-4xl text-black my-2 font-black">
             Sell Your Car At Best Price Instantly From Home
-          </h1>
+          </h4>
 
           <h3 className="text-lg md:text-2xl uppercase tracking-wide text-blue-950 my-6">
             Let's select your car brand
@@ -108,8 +105,23 @@ const sellCars = () => {
         <div className="container mx-auto md:w-[70%] mb-6">
           <VehicleInfo />
         </div>
-
-        <Howtosell />
+        <TipsAdviceSection />
+        <Howtosell processText={true} hideText={true} />
+        <div className="container mx-auto px-4 md:px-6 lg:px-20">
+          <h2 className="text-3xl md:text-4xl font-bold leading-snug text-center">
+            What to Keep in Mind While Selling a Used Car
+          </h2>
+          <Image
+            width={400}
+            unoptimized
+            priority
+            height={400}
+            alt="Sell Car Png"
+            src={"/assets/graphics.png"}
+            className="w-fit py-10 object-contain"
+          />
+        </div>
+        <HeaderSection />
 
         <div className="w-full h-fit">
           <TestimonialCarousel testimonialData={sellTestimonialData} />

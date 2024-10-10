@@ -1,6 +1,9 @@
 import Head from "next/head";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import HomeQuestions from "@/components/Home/HomeQuestions";
+import { BuyFaqData } from "@/common/faqData";
+import SeoBuyData from "@/components/sell-used-car/SeoBuyData";
 
 // Lazy loading components
 const FilterCars = dynamic(
@@ -19,6 +22,14 @@ const BuyUsedCars = ({ initialCars, initialTotalItems, featuredCars }) => {
   const [carListing, setCarListing] = useState(initialCars || []);
   const [loading, setLoading] = useState(false);
   const [gridView, setGridView] = useState(true);
+
+  const handleScroll = () => {
+    const element = document.getElementById("seoData");
+    if (element) {
+      const offset = element.offsetTop;
+      window.scrollTo({ top: offset - 150, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -45,10 +56,7 @@ const BuyUsedCars = ({ initialCars, initialTotalItems, featuredCars }) => {
           content="Discover a vast selection of certified used cars at Unifi Cars. Enjoy a reliable and convenient online car buying experience. Start browsing today!"
         />
         <meta property="og:url" content="https://unificars.com/buy-used-cars" />
-        <meta
-          property="og:image"
-          content="https://unificars.com/logo.png"
-        />
+        <meta property="og:image" content="https://unificars.com/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -58,10 +66,7 @@ const BuyUsedCars = ({ initialCars, initialTotalItems, featuredCars }) => {
           name="twitter:description"
           content="Find your next car at Unifi Cars. We offer certified pre-owned vehicles with competitive pricing and a seamless online buying process."
         />
-        <meta
-          name="twitter:image"
-          content="https://unificars.com/logo.png"
-        />
+        <meta name="twitter:image" content="https://unificars.com/logo.png" />
         <link rel="canonical" href="https://unificars.com/buy-used-cars" />
       </Head>
       <div className="p-4 md:p-6 lg:p-0">
@@ -85,6 +90,20 @@ const BuyUsedCars = ({ initialCars, initialTotalItems, featuredCars }) => {
               setLoading={setLoading}
               filterUrl={`https://crm.unificars.com/api/filtersassuredsidebar`}
             />
+            <h2 className="mt-5 mb-2 text-orange-500 text-lg font-bold">
+              2500+ used cars in Delhi
+            </h2>
+            <p className="text-sm pb-5 lg:pb-0">
+              Unifi Cars offers you a wide selection of 2500+ used cars in Delhi
+              at affordable prices, including popular brands like Maruti,
+              Hyundai, Honda, Toyota, Mahindra, and more{" "}
+              <span
+                onClick={handleScroll}
+                className="underline cursor-pointer underline-offset-1 text-blue-400 font-semibold"
+              >
+                Learn More...
+              </span>
+            </p>
             <AllCars
               carListing={carListing}
               featuredlist={featuredCars}
@@ -94,6 +113,8 @@ const BuyUsedCars = ({ initialCars, initialTotalItems, featuredCars }) => {
               assured={0}
               folder={"listing"}
             />
+            <SeoBuyData />
+            <HomeQuestions faqData={BuyFaqData} />
           </div>
         </div>
       </div>
